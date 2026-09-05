@@ -1,9 +1,8 @@
 # RagnaModManager official mod registry
 
-This directory is a local mirror of the documentation intended for the public
-`Brollyy/RagnaModManager-ModRegistry` repository. The registry is a reviewed
-allow-list: a mod is trusted because a maintainer has reviewed and merged its
-entry, not because somebody mentioned it in an Issue.
+The registry is a reviewed allow-list: a mod is trusted because a maintainer
+has reviewed and merged its entry, not because somebody mentioned it in an
+Issue.
 
 The manager consumes the published `index.json` from:
 
