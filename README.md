@@ -59,10 +59,107 @@ reviewed and merged.
 - Respect the Ragnarock developers' terms, the licenses of included assets, and
   the licenses of dependencies.
 
+## Package manifest format
+
+Every `.rmod` archive must contain a `manifest.json` at its root. The manifest
+must include `schemaVersion` (`1`), `id`, `name`, `version`, `game`
+(`"ragnarock"`), and a non-empty `files` array. `id` and `version` must match
+the catalog entry and the package filename metadata.
+
+The remaining manifest fields are:
+
+- `author`: optional author or maintainer name.
+- `description`: optional user-facing description.
+- `requires`: optional object mapping manager/runtime requirements to version
+  requirements, for example `{ "ragnamodmanager": ">=1.1.0" }`.
+- `dependencies`: optional object mapping mod IDs to version requirements. These
+  are runtime mod dependencies and should agree with the catalog entry.
+- `conflicts`: optional array of mod IDs that cannot be enabled together with
+  this mod. A declared conflict blocks deployment.
+- `affects`: optional array of stable target identifiers, such as an asset,
+  feature, or shared game area. Two enabled mods declaring the same target are
+  treated as conflicting unless the deployment rules allow it.
+- `hooks`: optional array of UE4SS hook names used by the mod.
+- `files`: array of file declarations. Each declaration requires `type` and
+  `source`; `target`, `modFolder`, and `loadOrder` are optional and depend on
+  the file type.
+
+For example:
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "better-hit-feedback",
+  "name": "Better Hit Feedback",
+  "version": "1.0.0",
+  "author": "Author",
+  "game": "ragnarock",
+  "description": "Improves hit feedback.",
+  "requires": {
+    "ragnamodmanager": ">=1.1.0"
+  },
+  "dependencies": {
+    "example-library": ">=1.2.0"
+  },
+  "conflicts": ["other-hit-feedback"],
+  "affects": ["results-screen"],
+  "hooks": ["ExampleHook"],
+  "files": [
+    {
+      "type": "ue4ss-lua",
+      "source": "scripts/better_hit_feedback.lua",
+      "modFolder": "BetterHitFeedback",
+      "loadOrder": 100
+    }
+  ]
+}
+```
+
 ## Catalog entry format
 
-Each mod may list multiple releases. Versions are selected semantically by the
-manager; the package manifest ID and version must match the catalog entry.
+`index.json` is schema version `1`. The top-level object must contain:
+
+- `schemaVersion`: required string, currently `"1"`.
+- `repository`: required string, exactly `"official"`.
+- `mods`: required array of catalog entries.
+
+Each `mods` entry must contain:
+
+- `id`: required lowercase package ID; it must match `manifest.json`.
+- `name`: required display name.
+- `author`: recommended author or maintainer name.
+- `description`: recommended short description.
+- `sourceUrl`: recommended public source repository URL.
+- `license`: recommended SPDX identifier or an explicit statement that no
+  license is declared.
+- `dependencies`: optional object mapping another catalog `id` to a version
+  requirement such as `">=0.2.1"`. Every dependency must have its own catalog
+  entry and at least one release satisfying the requirement.
+- `conflicts`: optional array of catalog `id` values that must not be enabled
+  together with this mod. A catalog conflict is an installation/deployment
+  constraint and should also be declared in the package manifest. Do not list
+  arbitrary prose here; use catalog IDs so the manager can identify the
+  conflicting installed mod.
+- `releases`: required non-empty array of immutable package releases.
+
+Each `releases` entry must contain:
+
+- `version`: required semantic version; it must match the package manifest.
+- `packageUrl`: required HTTPS URL for the immutable `.rmod` asset.
+- `sha256`: required 64-character SHA-256 checksum of that exact asset.
+- `publishedAt`: recommended ISO-8601 UTC publication timestamp.
+- `changelog`: recommended release-note summary. Use an explicit statement if
+  the upstream release has no notes.
+- `sizeBytes`: optional package size in bytes.
+
+The manager uses `dependencies` to automatically select and download missing
+catalog packages before installing the requested mod. It selects the newest
+release satisfying each requirement. Versions are compared using SemVer,
+including prerelease identifiers. A catalog dependency is not a replacement
+for the same dependency declaration in the package manifest; both must agree.
+
+Versions are selected semantically by the manager; the package manifest ID and
+version must match the catalog entry.
 
 ```json
 {
@@ -74,12 +171,22 @@ manager; the package manifest ID and version must match the catalog entry.
       "name": "Better Hit Feedback",
       "author": "Author",
       "description": "Improves hit feedback.",
+      "sourceUrl": "https://github.com/example/better-hit-feedback",
+      "license": "MIT",
+      "dependencies": {
+        "example-library": ">=1.2.0"
+      },
+      "conflicts": [
+        "other-hit-feedback"
+      ],
       "releases": [
         {
           "version": "1.0.0",
           "packageUrl": "https://github.com/example/mod/releases/download/v1.0.0/better-hit-feedback-1.0.0.rmod",
           "sha256": "64 hexadecimal characters",
-          "publishedAt": "2026-09-05T00:00:00Z"
+          "publishedAt": "2026-09-05T00:00:00Z",
+          "changelog": "Initial public release.",
+          "sizeBytes": 123456
         }
       ]
     }
