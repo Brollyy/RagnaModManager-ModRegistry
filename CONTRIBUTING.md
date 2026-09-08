@@ -1,4 +1,7 @@
-# Contributing to the official registry
+# Contributing to the RagnaModManager community catalog
+
+This is a community-maintained project and is not affiliated with or endorsed
+by Ragnarock, Wanadev, or RagnaCustoms.
 
 Please use the Mod request Issue template for a new mod. Maintainers will
 convert an approved request into a catalog pull request. Authors may also open

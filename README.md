@@ -1,8 +1,12 @@
-# RagnaModManager official mod registry
+# RagnaModManager community mod catalog
 
-The registry is a reviewed allow-list: a mod is trusted because a maintainer
+This is a community-maintained project and catalog. It is not affiliated with
+or endorsed by Ragnarock, Wanadev, or RagnaCustoms.
+
+The catalog is a reviewed allow-list: a mod is included because a maintainer
 has reviewed and merged its entry, not because somebody mentioned it in an
-Issue.
+Issue. Review means the package was checked against the catalog’s maintenance
+criteria; it is not an endorsement by the game developer or the mod authors.
 
 The manager consumes the published `index.json` from:
 
@@ -35,7 +39,7 @@ source or release that can be inspected and a reproducible package asset.
 
 Maintainers inspect the archive, validate all paths and manifest declarations,
 test installation and removal, calculate the SHA-256 checksum, and add the
-release to `index.json`. A package is not trusted until that catalog change is
+release to `index.json`. A package is not included until that catalog change is
 reviewed and merged.
 
 ## Package rules
@@ -120,7 +124,7 @@ For example:
 `index.json` is schema version `1`. The top-level object must contain:
 
 - `schemaVersion`: required string, currently `"1"`.
-- `repository`: required string, exactly `"official"`.
+- `repository`: required string, exactly `"rmm-registry"`.
 - `mods`: required array of catalog entries.
 
 Each `mods` entry must contain:
@@ -164,7 +168,7 @@ version must match the catalog entry.
 ```json
 {
   "schemaVersion": "1",
-  "repository": "official",
+  "repository": "rmm-registry",
   "mods": [
     {
       "id": "better-hit-feedback",
