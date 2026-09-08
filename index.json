@@ -22,7 +22,7 @@
       "author": "Brollyy",
       "description": "UE4SS Lua mod adding custom-song voting controls to Ragnarock Results screens.",
       "dependencies": {
-        "ragnacustoms-api": ">=0.2.1"
+        "ragnacustoms-api": ">=0.2.0"
       },
       "releases": [
         {
