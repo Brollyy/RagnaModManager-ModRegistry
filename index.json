@@ -9,10 +9,10 @@
       "description": "Reusable UE4SS Lua library for the RagnaCustoms catalog, downloads, and voting APIs.",
       "releases": [
         {
-          "version": "0.2.1",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.1/ragnacustoms-api-0.2.1.rmod",
-          "sha256": "6cbb3d31402db9c6c1541577c0daa885543a15a0d42fb7fccbd42e2028fae1de",
-          "publishedAt": "2026-09-08T06:19:21Z"
+          "version": "0.2.2",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.2/ragnacustoms-api-0.2.2.rmod",
+          "sha256": "5a5df15a515607c72e40dc4d803fc7877bbf02d9aa01b580db925ad1096799cb",
+          "publishedAt": "2026-09-08T16:07:07Z"
         }
       ]
     },
