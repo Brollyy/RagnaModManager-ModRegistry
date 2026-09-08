@@ -59,6 +59,62 @@ reviewed and merged.
 - Respect the Ragnarock developers' terms, the licenses of included assets, and
   the licenses of dependencies.
 
+## Package manifest format
+
+Every `.rmod` archive must contain a `manifest.json` at its root. The manifest
+must include `schemaVersion` (`1`), `id`, `name`, `version`, `game`
+(`"ragnarock"`), and a non-empty `files` array. `id` and `version` must match
+the catalog entry and the package filename metadata.
+
+The remaining manifest fields are:
+
+- `author`: optional author or maintainer name.
+- `description`: optional user-facing description.
+- `requires`: optional object mapping manager/runtime requirements to version
+  requirements, for example `{ "ragnamodmanager": ">=1.1.0" }`.
+- `dependencies`: optional object mapping mod IDs to version requirements. These
+  are runtime mod dependencies and should agree with the catalog entry.
+- `conflicts`: optional array of mod IDs that cannot be enabled together with
+  this mod. A declared conflict blocks deployment.
+- `affects`: optional array of stable target identifiers, such as an asset,
+  feature, or shared game area. Two enabled mods declaring the same target are
+  treated as conflicting unless the deployment rules allow it.
+- `hooks`: optional array of UE4SS hook names used by the mod.
+- `files`: array of file declarations. Each declaration requires `type` and
+  `source`; `target`, `modFolder`, and `loadOrder` are optional and depend on
+  the file type.
+
+For example:
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "better-hit-feedback",
+  "name": "Better Hit Feedback",
+  "version": "1.0.0",
+  "author": "Author",
+  "game": "ragnarock",
+  "description": "Improves hit feedback.",
+  "requires": {
+    "ragnamodmanager": ">=1.1.0"
+  },
+  "dependencies": {
+    "example-library": ">=1.2.0"
+  },
+  "conflicts": ["other-hit-feedback"],
+  "affects": ["results-screen"],
+  "hooks": ["ExampleHook"],
+  "files": [
+    {
+      "type": "ue4ss-lua",
+      "source": "scripts/better_hit_feedback.lua",
+      "modFolder": "BetterHitFeedback",
+      "loadOrder": 100
+    }
+  ]
+}
+```
+
 ## Catalog entry format
 
 `index.json` is schema version `1`. The top-level object must contain:
