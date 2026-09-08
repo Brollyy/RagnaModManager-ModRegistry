@@ -113,7 +113,7 @@ version must match the catalog entry.
       "sourceUrl": "https://github.com/example/better-hit-feedback",
       "license": "MIT",
       "dependencies": {
-        "ragnacustoms-api": ">=0.2.1"
+        "example-library": ">=1.2.0"
       },
       "releases": [
         {
