@@ -124,7 +124,7 @@ For example:
 `index.json` is schema version `1`. The top-level object must contain:
 
 - `schemaVersion`: required string, currently `"1"`.
-- `repository`: required machine-readable string, exactly `"rmm-registry"`.
+- `repository`: required string, exactly `"rmm-registry"`.
 - `mods`: required array of catalog entries.
 
 Each `mods` entry must contain:
