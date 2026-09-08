@@ -61,8 +61,44 @@ reviewed and merged.
 
 ## Catalog entry format
 
-Each mod may list multiple releases. Versions are selected semantically by the
-manager; the package manifest ID and version must match the catalog entry.
+`index.json` is schema version `1`. The top-level object must contain:
+
+- `schemaVersion`: required string, currently `"1"`.
+- `repository`: required string, exactly `"official"`.
+- `mods`: required array of catalog entries.
+
+Each `mods` entry must contain:
+
+- `id`: required lowercase package ID; it must match `manifest.json`.
+- `name`: required display name.
+- `author`: recommended author or maintainer name.
+- `description`: recommended short description.
+- `sourceUrl`: recommended public source repository URL.
+- `license`: recommended SPDX identifier or an explicit statement that no
+  license is declared.
+- `dependencies`: optional object mapping another catalog `id` to a version
+  requirement such as `">=0.2.1"`. Every dependency must have its own catalog
+  entry and at least one release satisfying the requirement.
+- `releases`: required non-empty array of immutable package releases.
+
+Each `releases` entry must contain:
+
+- `version`: required semantic version; it must match the package manifest.
+- `packageUrl`: required HTTPS URL for the immutable `.rmod` asset.
+- `sha256`: required 64-character SHA-256 checksum of that exact asset.
+- `publishedAt`: recommended ISO-8601 UTC publication timestamp.
+- `changelog`: recommended release-note summary. Use an explicit statement if
+  the upstream release has no notes.
+- `sizeBytes`: optional package size in bytes.
+
+The manager uses `dependencies` to automatically select and download missing
+catalog packages before installing the requested mod. It selects the newest
+release satisfying each requirement. Versions are compared using SemVer,
+including prerelease identifiers. A catalog dependency is not a replacement
+for the same dependency declaration in the package manifest; both must agree.
+
+Versions are selected semantically by the manager; the package manifest ID and
+version must match the catalog entry.
 
 ```json
 {
@@ -74,12 +110,19 @@ manager; the package manifest ID and version must match the catalog entry.
       "name": "Better Hit Feedback",
       "author": "Author",
       "description": "Improves hit feedback.",
+      "sourceUrl": "https://github.com/example/better-hit-feedback",
+      "license": "MIT",
+      "dependencies": {
+        "ragnacustoms-api": ">=0.2.1"
+      },
       "releases": [
         {
           "version": "1.0.0",
           "packageUrl": "https://github.com/example/mod/releases/download/v1.0.0/better-hit-feedback-1.0.0.rmod",
           "sha256": "64 hexadecimal characters",
-          "publishedAt": "2026-09-05T00:00:00Z"
+          "publishedAt": "2026-09-05T00:00:00Z",
+          "changelog": "Initial public release.",
+          "sizeBytes": 123456
         }
       ]
     }

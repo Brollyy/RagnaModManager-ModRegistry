@@ -7,12 +7,15 @@
       "name": "RagnaCustomsApi",
       "author": "Brollyy",
       "description": "Reusable UE4SS Lua library for the RagnaCustoms catalog, downloads, and voting APIs.",
+      "sourceUrl": "https://github.com/Brollyy/RagnaCustomsApi",
+      "license": "No license declared",
       "releases": [
         {
           "version": "0.2.2",
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.2/ragnacustoms-api-0.2.2.rmod",
           "sha256": "5a5df15a515607c72e40dc4d803fc7877bbf02d9aa01b580db925ad1096799cb",
-          "publishedAt": "2026-09-08T16:07:07Z"
+          "publishedAt": "2026-09-08T16:07:07Z",
+          "changelog": "Package release v0.2.2."
         }
       ]
     },
@@ -21,6 +24,8 @@
       "name": "RagnaCustomsVote",
       "author": "Brollyy",
       "description": "UE4SS Lua mod adding custom-song voting controls to Ragnarock Results screens.",
+      "sourceUrl": "https://github.com/Brollyy/RagnaCustomsVote",
+      "license": "No license declared",
       "dependencies": {
         "ragnacustoms-api": ">=0.2.0"
       },
@@ -29,7 +34,8 @@
           "version": "0.2.0",
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.2.0/ragnacustoms-vote-0.2.0.rmod",
           "sha256": "26048040822ee702cb0d9fec064de22af86033fef28c3be34869e3c45ba310d8",
-          "publishedAt": "2026-09-07T22:35:26Z"
+          "publishedAt": "2026-09-07T22:35:26Z",
+          "changelog": "First public package release. Requires RagnaCustomsApi >=0.2.0 and opts into the game-provided WanApi contract."
         }
       ]
     }
