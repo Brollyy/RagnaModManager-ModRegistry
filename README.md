@@ -135,6 +135,11 @@ Each `mods` entry must contain:
 - `dependencies`: optional object mapping another catalog `id` to a version
   requirement such as `">=0.2.1"`. Every dependency must have its own catalog
   entry and at least one release satisfying the requirement.
+- `conflicts`: optional array of catalog `id` values that must not be enabled
+  together with this mod. A catalog conflict is an installation/deployment
+  constraint and should also be declared in the package manifest. Do not list
+  arbitrary prose here; use catalog IDs so the manager can identify the
+  conflicting installed mod.
 - `releases`: required non-empty array of immutable package releases.
 
 Each `releases` entry must contain:
@@ -171,6 +176,9 @@ version must match the catalog entry.
       "dependencies": {
         "example-library": ">=1.2.0"
       },
+      "conflicts": [
+        "other-hit-feedback"
+      ],
       "releases": [
         {
           "version": "1.0.0",
