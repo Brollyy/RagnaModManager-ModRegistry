@@ -6,7 +6,7 @@
       "id": "ragnacustoms-api",
       "name": "RagnaCustomsApi",
       "author": "Brollyy",
-      "description": "Reusable UE4SS Lua library for the RagnaCustoms catalog, downloads, and voting APIs.",
+      "description": "Shared support for RagnaCustoms mods.",
       "sourceUrl": "https://github.com/Brollyy/RagnaCustomsApi",
       "license": "MIT",
       "releases": [
@@ -23,7 +23,7 @@
       "id": "ragnacustoms-vote",
       "name": "RagnaCustomsVote",
       "author": "Brollyy",
-      "description": "UE4SS Lua mod adding custom-song voting controls to Ragnarock Results screens.",
+      "description": "Adds custom-song voting to the Results screen.",
       "sourceUrl": "https://github.com/Brollyy/RagnaCustomsVote",
       "license": "MIT",
       "dependencies": {
