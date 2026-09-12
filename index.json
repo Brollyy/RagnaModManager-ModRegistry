@@ -11,11 +11,11 @@
       "license": "MIT",
       "releases": [
         {
-          "version": "0.2.3",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.3/ragnacustoms-api-0.2.3.rmod",
-          "sha256": "38f55c9c38515c57ade59fd7d34b9758eabb98a86e5a19a03b7d27b3d4adb347",
-          "publishedAt": "2026-09-10T17:55:50Z",
-          "changelog": "Requests now fail cleanly when the RagnaCustoms server is unavailable; mods using the API receive a clear error they can display or handle; and reliability is improved across supported UE4SS setups. No setup changes are required."
+          "version": "0.2.4",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.4/ragnacustoms-api-0.2.4.rmod",
+          "sha256": "86de411498323eaa49058136c50977ddeecf21b73088f4284595604ea6d4fc72",
+          "publishedAt": "2026-09-12T00:10:38Z",
+          "changelog": "Handle non-2xx responses, including expected 404 responses, as completed requests so unavailable or misconfigured endpoints fail cleanly instead of waiting for a timeout."
         }
       ]
     },
@@ -31,11 +31,11 @@
       },
       "releases": [
         {
-          "version": "0.2.1",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.2.1/ragnacustoms-vote-0.2.1.rmod",
-          "sha256": "208cab87bd30aec18ce313bae2b368964d7b8f87904080273c5be174a38afdf7",
-          "publishedAt": "2026-09-10T17:55:54Z",
-          "changelog": "Vote for custom songs directly from the Results screen, see current vote totals and your selection, use the existing RagnaCustoms server configuration, and retry when voting is temporarily unavailable. Requires RagnaCustomsApi >=0.2.0 and a game CustomApiUrls entry for the RagnaCustoms WanApi endpoint."
+          "version": "0.2.2",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.2.2/ragnacustoms-vote-0.2.2.rmod",
+          "sha256": "07228ccfd9fcd639f0368e0232426ca5e8fad8e6ee46f7eeb778dad327a6040a",
+          "publishedAt": "2026-09-12T00:23:51Z",
+          "changelog": "Disable vote controls after a request failure so unavailable or misconfigured endpoints cannot be retried through an invalid UI state."
         }
       ]
     }
