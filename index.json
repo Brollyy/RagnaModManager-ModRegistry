@@ -11,11 +11,12 @@
       "license": "MIT",
       "releases": [
         {
-          "version": "0.2.4",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.4/ragnacustoms-api-0.2.4.rmod",
-          "sha256": "86de411498323eaa49058136c50977ddeecf21b73088f4284595604ea6d4fc72",
-          "publishedAt": "2026-09-12T00:10:38Z",
-          "changelog": "Handle non-2xx responses, including expected 404 responses, as completed requests so unavailable or misconfigured endpoints fail cleanly instead of waiting for a timeout."
+          "version": "0.2.5",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.5/ragnacustoms-api-0.2.5.rmod",
+          "sha256": "07a29549da19290cd7822369691c563817d52ded0cd8745851dd3de0e31fbb07",
+          "publishedAt": "2026-09-16T18:43:34Z",
+          "changelog": "Fix VaRest response-body extraction so WanApi vote responses are parsed correctly on the UE4SS runtime.",
+          "sizeBytes": 15083
         }
       ]
     },
