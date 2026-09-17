@@ -36,7 +36,7 @@
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.2.4/ragnacustoms-vote-0.2.4.rmod",
           "sha256": "d61db6e14b6b68b2364136ca2d7edea3f747fa48aec200150936253a578a9e04d",
           "publishedAt": "2026-09-17T06:26:48Z",
-          "changelog": "Add PC-VR Results-screen voting controls while preserving the Flat layout; use the rendered VR ScoreboardWidget surface and shared vote button construction."
+          "changelog": "Adds voting buttons for custom songs on the Flat and PC-VR Results screens."
         }
       ]
     }
