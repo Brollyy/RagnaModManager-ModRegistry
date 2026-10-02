@@ -15,7 +15,7 @@
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.3.0/ragnacustoms-api-0.3.0.rmod",
           "sha256": "b6064afeacd596d997efc4858ee2b98627154e7140a6ba533a3f37a3a40fa751",
           "publishedAt": "2026-10-02T18:09:14Z",
-          "changelog": "Aligns the API catalog with the current RagnaCustoms API documentation; adds account, playlist, and catalog helpers; improves runtime API configuration and response handling. Supersedes the 0.2.x release line.",
+          "changelog": "The 0.2.5 release is deprecated because RagnaCustoms no longer supports the API catalog it used. Aligns the catalog with current API docs; adds account, playlist, and catalog helpers; improves runtime API configuration and response handling.",
           "sizeBytes": 22701
         }
       ]
