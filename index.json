@@ -11,12 +11,12 @@
       "license": "MIT",
       "releases": [
         {
-          "version": "0.2.5",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.5/ragnacustoms-api-0.2.5.rmod",
-          "sha256": "07a29549da19290cd7822369691c563817d52ded0cd8745851dd3de0e31fbb07",
-          "publishedAt": "2026-09-16T18:43:34Z",
-          "changelog": "Fix VaRest response-body extraction so WanApi vote responses are parsed correctly on the UE4SS runtime.",
-          "sizeBytes": 15083
+          "version": "0.3.0",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.3.0/ragnacustoms-api-0.3.0.rmod",
+          "sha256": "b6064afeacd596d997efc4858ee2b98627154e7140a6ba533a3f37a3a40fa751",
+          "publishedAt": "2026-10-02T18:09:14Z",
+          "changelog": "Adds catalog, account, and playlist APIs, improves structured response handling, and resolves API configuration from Ragnarock's live settings.",
+          "sizeBytes": 22701
         }
       ]
     },
@@ -28,15 +28,16 @@
       "sourceUrl": "https://github.com/Brollyy/RagnaCustomsVote",
       "license": "MIT",
       "dependencies": {
-        "ragnacustoms-api": ">=0.2.0"
+        "ragnacustoms-api": ">=0.3.0"
       },
       "releases": [
         {
-          "version": "0.2.4",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.2.4/ragnacustoms-vote-0.2.4.rmod",
-          "sha256": "d61db6e14b6b68b2364136ca2d7edea3f747fa48aec200150936253a578a9e04d",
-          "publishedAt": "2026-09-17T06:26:48Z",
-          "changelog": "Adds voting buttons for custom songs on the Flat and PC-VR Results screens."
+          "version": "0.3.0",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.0/ragnacustoms-vote-0.3.0.rmod",
+          "sha256": "e28d9e2080339dead04e0785ca41e3d2ae44f1d202a33df28f7f2356c4a833a6",
+          "publishedAt": "2026-10-02T18:09:34Z",
+          "changelog": "Updates voting for RagnaCustomsApi 0.3.0, improves failure recovery, and keeps exact PC VR vote counts readable.",
+          "sizeBytes": 16057
         }
       ]
     }
