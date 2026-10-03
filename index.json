@@ -28,15 +28,16 @@
       "sourceUrl": "https://github.com/Brollyy/RagnaCustomsVote",
       "license": "MIT",
       "dependencies": {
-        "ragnacustoms-api": ">=0.2.0"
+        "ragnacustoms-api": ">=0.3.0"
       },
       "releases": [
         {
-          "version": "0.2.4",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.2.4/ragnacustoms-vote-0.2.4.rmod",
-          "sha256": "d61db6e14b6b68b2364136ca2d7edea3f747fa48aec200150936253a578a9e04d",
-          "publishedAt": "2026-09-17T06:26:48Z",
-          "changelog": "Adds voting buttons for custom songs on the Flat and PC-VR Results screens."
+          "version": "0.3.0",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.0/ragnacustoms-vote-0.3.0.rmod",
+          "sha256": "e28d9e2080339dead04e0785ca41e3d2ae44f1d202a33df28f7f2356c4a833a6",
+          "publishedAt": "2026-10-02T18:09:34Z",
+          "changelog": "Updates voting for RagnaCustomsApi 0.3.0, improves failure recovery, and keeps exact PC VR vote counts readable.",
+          "sizeBytes": 16057
         }
       ]
     }
