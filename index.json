@@ -11,12 +11,12 @@
       "license": "MIT",
       "releases": [
         {
-          "version": "0.2.5",
-          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.2.5/ragnacustoms-api-0.2.5.rmod",
-          "sha256": "07a29549da19290cd7822369691c563817d52ded0cd8745851dd3de0e31fbb07",
-          "publishedAt": "2026-09-16T18:43:34Z",
-          "changelog": "Fix VaRest response-body extraction so WanApi vote responses are parsed correctly on the UE4SS runtime.",
-          "sizeBytes": 15083
+          "version": "0.3.0",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.3.0/ragnacustoms-api-0.3.0.rmod",
+          "sha256": "b6064afeacd596d997efc4858ee2b98627154e7140a6ba533a3f37a3a40fa751",
+          "publishedAt": "2026-10-02T18:09:14Z",
+          "changelog": "The 0.2.5 release is deprecated because RagnaCustoms no longer supports the API catalog it used. Aligns the catalog with current documentation at https://ragnacustoms.com/api/docs; adds account, playlist, and catalog helpers; improves runtime API configuration and response handling.",
+          "sizeBytes": 22701
         }
       ]
     },
