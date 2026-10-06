@@ -15,7 +15,7 @@
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.3.1/ragnacustoms-api-0.3.1.rmod",
           "sha256": "86545b379723105a26ee06273141f2288f1140e9a0a90bd90646ae88bd5343d4",
           "publishedAt": "2026-10-06T14:13:33Z",
-          "changelog": "Fix UE4SS 3.0.1 response-string lifetime crashes and make VaRest status and response callbacks game-thread safe.",
+          "changelog": "Prevents crashes while the game loads custom-song vote data.",
           "sizeBytes": 24135
         },
         {
@@ -44,7 +44,7 @@
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.1/ragnacustoms-vote-0.3.1.rmod",
           "sha256": "a985bdb9b6cf89a26cb90f3071784a284ba7c836e82da3856b2a8daa604352f0",
           "publishedAt": "2026-10-06T14:13:50Z",
-          "changelog": "Fix Windows Flat Results crashes on UE4SS 3.0.1, keep vote controls responsive after API results, and reduce risky reflection work.",
+          "changelog": "Fixes a crash when the Windows Flat Results screen opens and keeps custom-song vote buttons responsive.",
           "sizeBytes": 16064
         },
         {
