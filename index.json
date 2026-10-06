@@ -11,6 +11,14 @@
       "license": "MIT",
       "releases": [
         {
+          "version": "0.3.1",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.3.1/ragnacustoms-api-0.3.1.rmod",
+          "sha256": "86545b379723105a26ee06273141f2288f1140e9a0a90bd90646ae88bd5343d4",
+          "publishedAt": "2026-10-06T14:13:33Z",
+          "changelog": "Fix UE4SS 3.0.1 response-string lifetime crashes and make VaRest status and response callbacks game-thread safe.",
+          "sizeBytes": 24135
+        },
+        {
           "version": "0.3.0",
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsApi/releases/download/v0.3.0/ragnacustoms-api-0.3.0.rmod",
           "sha256": "b6064afeacd596d997efc4858ee2b98627154e7140a6ba533a3f37a3a40fa751",
@@ -31,6 +39,14 @@
         "ragnacustoms-api": ">=0.3.0"
       },
       "releases": [
+        {
+          "version": "0.3.1",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.1/ragnacustoms-vote-0.3.1.rmod",
+          "sha256": "a985bdb9b6cf89a26cb90f3071784a284ba7c836e82da3856b2a8daa604352f0",
+          "publishedAt": "2026-10-06T14:13:50Z",
+          "changelog": "Fix Windows Flat Results crashes on UE4SS 3.0.1, keep vote controls responsive after API results, and reduce risky reflection work.",
+          "sizeBytes": 16064
+        },
         {
           "version": "0.3.0",
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.0/ragnacustoms-vote-0.3.0.rmod",
