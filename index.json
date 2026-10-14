@@ -40,6 +40,14 @@
       },
       "releases": [
         {
+          "version": "0.3.2",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.2/ragnacustoms-vote-0.3.2.rmod",
+          "sha256": "920baec090e431e08c5f383effec5d6e741c88aeb5da5ae98be726323e011127",
+          "publishedAt": "2026-10-14T17:24:41Z",
+          "changelog": "Improves custom-song voting across back-to-back songs, including songs without an ID file, and improves stability when switching between custom and official songs.",
+          "sizeBytes": 17951
+        },
+        {
           "version": "0.3.1",
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.1/ragnacustoms-vote-0.3.1.rmod",
           "sha256": "a985bdb9b6cf89a26cb90f3071784a284ba7c836e82da3856b2a8daa604352f0",
