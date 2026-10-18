@@ -40,6 +40,14 @@
       },
       "releases": [
         {
+          "version": "0.3.3",
+          "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.3/ragnacustoms-vote-0.3.3.rmod",
+          "sha256": "206ab6f4fdae08f2d6ea53a24585c6c87df96fcbdb60d3f4432b068a67d5a382",
+          "publishedAt": "2026-10-18T10:26:54Z",
+          "changelog": "Fixes voting with controllers in PC VR.",
+          "sizeBytes": 17936
+        },
+        {
           "version": "0.3.2",
           "packageUrl": "https://github.com/Brollyy/RagnaCustomsVote/releases/download/v0.3.2/ragnacustoms-vote-0.3.2.rmod",
           "sha256": "920baec090e431e08c5f383effec5d6e741c88aeb5da5ae98be726323e011127",
